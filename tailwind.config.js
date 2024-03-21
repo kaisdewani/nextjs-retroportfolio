@@ -1,10 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './styles/**/*.css'],
-  content: [],
+  content: [
+    "./pages/**/*.{js,jsx,ts,tsx}",
+    "./components/**/*.{js,jsx,ts,tsx}"
+  ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        retroGrey: "#F0F3FF",
+        retroNavy: "#211951",
+        retroPurple: "#836FFF",
+        retroMint: "#15F5BA"
+      }
+    }
   },
-  plugins: [],
-}
-
+  plugins: []
+};

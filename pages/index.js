@@ -5,7 +5,6 @@ import LocalDiskModal from '../components/LocalDiskModal';
 import ResumeModal from '../components/ResumeModal';
 import TaskBarComponent from '../components/TaskBarComponent';
 import ClockComponent from '../components/ClockComponent';
-import "tailwindcss/tailwind.css";
 import YouTubeModal from '../components/YouTubeModal';
 
 const Home = () => {
@@ -37,7 +36,7 @@ const Home = () => {
           onOpenResume={() => setResume(true)}
           onOpenYouTubeModal={() => setYouTubeModal(true)}
         />
-        <ClockComponent />
+        {/* <ClockComponent /> */}
       </footer>
     </div>
   );
