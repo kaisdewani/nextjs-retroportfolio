@@ -1,5 +1,5 @@
 import React from "react";
-import { Modal, List, Frame } from "@react95/core"; // Corrected import line
+import { Modal, List, Frame } from "@react95/core";
 import { CdMusic } from "@react95/icons";
 
 const YouTubeModal = ({ isOpen, onClose }) => {
@@ -12,6 +12,10 @@ const YouTubeModal = ({ isOpen, onClose }) => {
       closeModal={onClose}
       width="300px"
       height="200px"
+      style={{
+        top: "15%",
+        left: "1%"
+      }}
       menu={[
         {
           name: "File",
@@ -24,19 +28,19 @@ const YouTubeModal = ({ isOpen, onClose }) => {
       <Frame
         boxShadow="none"
         style={{
-          height: "315",
-          width: "560"
+          height: "315px",
+          width: "560px"
         }}
       >
         <iframe
           width="560"
           height="315"
-          src="https://www.youtube.com/embed/8cQSCIWHwRQ?si=knX-daoIcI0yJL-b&autoplay=1&mute=1"
+          src="https://www.youtube.com/embed/8cQSCIWHwRQ?autoplay=1&mute=1"
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
         ></iframe>
       </Frame>
     </Modal>
