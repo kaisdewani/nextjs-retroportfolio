@@ -9,7 +9,7 @@ const YouTubeModal = ({ isOpen, onClose }) => {
     <Modal
       icon={<CdMusic variant="32x32_4" />}
       title="Old_School_Cool.mp3"
-      onClose={onClose}
+      closeModal={onClose}
       width="300px"
       height="200px"
       menu={[

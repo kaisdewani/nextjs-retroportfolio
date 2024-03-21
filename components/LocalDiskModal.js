@@ -9,7 +9,7 @@ const LocalDiskModal = ({ isOpen, onClose }) => {
     <Modal
       icon={<WindowsExplorer variant="32x32_4" />}
       title="Windows Explorer"
-      onClose={onClose}
+      closeModal={onClose}
       width="300px"
       height="200px"
       menu={[

@@ -1,6 +1,7 @@
-import React from 'react';
-import { Modal, List } from '@react95/core';
-import { Defrag8  } from '@react95/icons';
+import React from "react";
+import { Modal, List } from "@react95/core";
+import { Defrag8 } from "@react95/icons";
+import "tailwindcss/tailwind.css";
 
 const ResumeModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
@@ -9,18 +10,21 @@ const ResumeModal = ({ isOpen, onClose }) => {
     <Modal
       icon={<Defrag8 variant="32x32_4" />}
       title="Dewani_Kais_Résumé"
-      onClose={onClose}
+      closeModal={onClose}
       width="300px"
       height="200px"
       menu={[
         {
           name: "File",
-          list: <List.Item onClick={onClose}>Close</List.Item>,
+          list: <List.Item onClick={onClose}>Close</List.Item>
         },
-        { name: "Edit" },
+        { name: "Edit" }
       ]}
     >
-      {/* Modal content */}
+      {/* Modal content using className for Tailwind CSS */}
+      <div className="max-w-full overflow-auto p-4">
+        
+      </div>
     </Modal>
   );
 };
