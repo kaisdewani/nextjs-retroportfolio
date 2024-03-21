@@ -8,7 +8,7 @@ const ResumeModal = ({ isOpen, onClose }) => {
   return (
     <Modal
       icon={<Defrag8 variant="32x32_4" />}
-      title="Dewani_Kais_Résumé"
+      title="Dewani_Kais_Résumé.pdf"
       closeModal={onClose}
       width="300px"
       height="200px"
