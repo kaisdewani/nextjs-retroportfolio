@@ -1,8 +1,8 @@
 import React from 'react';
 import { TaskBar, List } from '@react95/core';
-import { WindowsExplorer, ReaderClosed, Defrag8 } from '@react95/icons';
+import { WindowsExplorer, ReaderClosed, Defrag8, CdMusic } from '@react95/icons';
 
-const TaskBarComponent = ({ onOpenExplorer, onOpenDisk, onOpenResume }) => {
+const TaskBarComponent = ({ onOpenExplorer, onOpenDisk, onOpenResume, onOpenYouTubeModal }) => {
   return (
     <TaskBar
       list={
@@ -15,6 +15,9 @@ const TaskBarComponent = ({ onOpenExplorer, onOpenDisk, onOpenResume }) => {
           </List.Item>
           <List.Item icon={<Defrag8 variant="32x32_4" />} onClick={onOpenResume}>
             Resume
+          </List.Item>
+          <List.Item icon={<CdMusic variant="32x32_4" />} onClick={onOpenYouTubeModal}>
+          Old_School_Cool.mp3
           </List.Item>
         </List>
       }
