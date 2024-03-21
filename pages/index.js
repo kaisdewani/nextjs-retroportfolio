@@ -10,8 +10,8 @@ import YouTubeModal from '../components/YouTubeModal';
 const Home = () => {
   const [showExplorer, setShowExplorer] = useState(false);
   const [showDisk, setShowDisk] = useState(false);
-  const [showResume, setResume] = useState(false);
-  const [showYouTubeModal, setYouTubeModal] = useState(false);
+  const [showResume, setResume] = useState(true);
+  const [showYouTubeModal, setYouTubeModal] = useState(true);
 
   return (
     <div className="flex flex-col h-screen bg-gray-300">
@@ -22,8 +22,9 @@ const Home = () => {
 
       <WindowsExplorerModal isOpen={showExplorer} onClose={() => setShowExplorer(false)} />
       <LocalDiskModal isOpen={showDisk} onClose={() => setShowDisk(false)} />
-      <ResumeModal isOpen={showResume} onClose={() => setResume(false)} />
       <YouTubeModal isOpen={showYouTubeModal} onClose={() => setYouTubeModal(false)} />
+      <ResumeModal isOpen={showResume} onClose={() => setResume(false)} />
+
 
       <main className="flex-grow p-4">
         {/* Main content */}

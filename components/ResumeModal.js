@@ -28,7 +28,7 @@ const ResumeModal = ({ isOpen, onClose }) => {
         <p>
           Email: <a href="mailto:kaisdewani@yahoo.com">kaisdewani@yahoo.com</a>
         </p>
-        <p>Phone: 954.682.8911</p>
+        <p>Phone: (954)-682-8911</p>
         <p>
           GitHub: <a href="https://github.com/kaisdewani">kaisdewani</a>
         </p>
