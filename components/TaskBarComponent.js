@@ -7,9 +7,9 @@ const TaskBarComponent = ({ onOpenExplorer, onOpenDisk, onOpenResume, onOpenYouT
     <TaskBar
       list={
         <List>
-          <List.Item icon={<ReaderClosed variant="32x32_4" />} onClick={onOpenDisk}>
+          {/* <List.Item icon={<ReaderClosed variant="32x32_4" />} onClick={onOpenDisk}>
             Local Disk (C:)
-          </List.Item>
+          </List.Item> */}
           <List.Item icon={<WindowsExplorer variant="32x32_4" />} onClick={onOpenExplorer}>
             Windows Explorer
           </List.Item>
