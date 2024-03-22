@@ -1,15 +1,20 @@
-I had originally created my portfolio project way back around 2018 - 2019 when I was first learning about react. Years later, I ended up using the same domain name to complete the cloud resume challenge. In that time, my resume has had multiple updates, and I wanted a better way to present myself as in the cloud resume challenge, I had just simply pasted my resume in basic HTML which looks ugly and basic.
+# Retro-themed Portfolio Project using React95 and Next.js
 
-I recently came across a git project called React95 ([https://github.com/React95/React95](https://github.com/React95/React95)) and I absolutely love the aesthetic. I have always had a soft spot for retro/outrun vibes and wanted to show that for my personal website.
+## Introduction
+I originally created my portfolio project back in 2018-2019 when I was first learning about React. However, over the years, my resume has undergone multiple updates, and I felt the need for a better presentation. Recently, I stumbled upon React95, a Git project that resonated with my love for retro/outrun vibes. I decided to revamp my portfolio using React95's aesthetic.
 
-The great thing about react95 is that it still has react compatible components which was great since I had originally started with react back in the day. For this project, I went with NextJS just in case I want to add pages. The NextJS page router will make it simpler hopefully in the future if I ever end up building out with more pages which I don't think will happen since react95 seems to be more of a “modal” type of layout.
+## Project Details
+- **Technology Stack**: React95, Next.js
+- **Inspiration Repositories**:
+  - [henriquespecian/casamento-nextjs](https://github.com/henriquespecian/casamento-nextjs)
+  - [InsafKhamzin/portfolio](https://github.com/InsafKhamzin/portfolio)
+- **Base Template Forked From**: [React95 Next.js Template](https://github.com/React95/nextjs-template)
 
-This was very much inspired by the following repos as I tried to figure out how to ‘connect the dots’ for the components to work on my page-
+## Implementation Process
+I forked the Next.js React95 repository from [React95/nextjs-template](https://github.com/React95/nextjs-template). The Next.js framework was chosen for its flexibility in adding additional pages in the future. Although React95 seems to lend itself more towards a modal-based layout, Next.js's page router simplifies potential future expansions.
 
-[https://github.com/henriquespecian/casamento-nextjs](https://github.com/henriquespecian/casamento-nextjs)
+## References
+- [React95 GitHub Repository](https://github.com/React95/React95)
 
-[https://github.com/InsafKhamzin/portfolio](https://github.com/InsafKhamzin/portfolio)
-
-I forked the same NextJS React95 repo as [casamento-nextjs](https://github.com/henriquespecian/casamento-nextjs)
-
-repo forked from - [https://github.com/React95/nextjs-template](https://github.com/React95/nextjs-template)
+## Conclusion
+This project represents my attempt to blend nostalgia with modern web development practices. Utilizing React95's retro aesthetic and Next.js's flexibility, I aim to present my portfolio in a visually appealing and user-friendly manner.
