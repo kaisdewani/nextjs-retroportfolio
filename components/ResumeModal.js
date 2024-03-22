@@ -12,7 +12,7 @@ const ResumeModal = ({ isOpen, onClose }) => {
       closeModal={onClose}
       width="300px"
       height="200px"
-      className="fixed top-4 right-4"
+      className="fixed top-6 right-4"
       menu={[
         {
           name: "File",
