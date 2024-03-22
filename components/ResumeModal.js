@@ -5,6 +5,10 @@ import { Defrag8 } from "@react95/icons";
 const ResumeModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
+  const handleShareClick = () => {
+    window.location = 'mailto:kaisdewani@yahoo.com';
+  };
+
   return (
     <Modal
       icon={<Defrag8 variant="32x32_4" />}
@@ -18,7 +22,8 @@ const ResumeModal = ({ isOpen, onClose }) => {
           name: "File",
           list: <List.Item onClick={onClose}>Close</List.Item>
         },
-        { name: "Edit" }
+        { name: "Contact Info", 
+        list: <List.Item onClick={handleShareClick}>Email</List.Item> }
       ]}
     >
       <div
