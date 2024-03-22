@@ -33,21 +33,21 @@ const Home = () => {
       />
       <ResumeModal isOpen={showResume} onClose={() => setResume(false)} />
 
-      <main className="flex-grow p-4">
-        <BackgroundVideo videoSource="/wallpaper.mp4" />
+      
+      <main className="flex-grow p-4 ">
+      <BackgroundVideo videoSource="/wallpaper.mp4" />
         {/* Main content */}
         <DesktopIcons />
       </main>
 
       <footer className="flex items-center justify-between text-black p-2 fixed bottom-0 w-full">
-        <div className="flex-1">
-          <TaskBarComponent
-            onOpenExplorer={() => setShowExplorer(true)}
-            onOpenDisk={() => setShowDisk(true)}
-            onOpenResume={() => setResume(true)}
-            onOpenYouTubeModal={() => setYouTubeModal(true)}
-          />
-        </div>
+        <TaskBarComponent
+          onOpenExplorer={() => setShowExplorer(true)}
+          onOpenDisk={() => setShowDisk(true)}
+          onOpenResume={() => setResume(true)}
+          onOpenYouTubeModal={() => setYouTubeModal(true)}
+        />
+        {/* <ClockComponent /> */}
       </footer>
     </div>
   );
