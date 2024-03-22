@@ -21,10 +21,10 @@ const ResumeModal = ({ isOpen, onClose }) => {
         { name: "Edit" }
       ]}
     >
-      {/* Modal content with background color using className for Tailwind CSS */}
-      {/* Changed className to include bg-gray-100 for light gray background */}
-      <div className="max-w-full overflow-auto p-4 bg-retroGrey content-center">
-        {/* Removed <body> tag as it's incorrect to use within a div */}
+      <div
+        className="overflow-auto p-4 bg-retroGrey"
+        style={{ maxHeight: "calc(80vh - 40px)" }}
+      >
         <h2 className="text-center text-xl max-w-full">Kais Dewani</h2>
         <p>
           Email: <a href="mailto:kaisdewani@yahoo.com">kaisdewani@yahoo.com</a>
