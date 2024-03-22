@@ -1,9 +1,18 @@
-import React from 'react';
-import { Modal, List } from '@react95/core';
-import { WindowsExplorer } from '@react95/icons';
+import React from "react";
+import { Modal, List } from "@react95/core";
+import { FolderExe, Mshtml32529, WindowsExplorer } from "@react95/icons";
 
 const WindowsExplorerModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
+
+  const githubUrl = "https://github.com/kaisdewani"
+
+  const tieriflicksArticleURL =
+    "https://www.linkedin.com/pulse/tieriflicks-my-first-app-movie-enthusiasts-kais-dewani-mykmc/?trackingId=Qv%2Fm95ql%2BVTuiDnjxYW5rg%3D%3D";
+
+  const handleIconClick = (passURL) => () => {
+    window.open(passURL, "_blank");
+  };
 
   return (
     <Modal
@@ -15,12 +24,32 @@ const WindowsExplorerModal = ({ isOpen, onClose }) => {
       menu={[
         {
           name: "File",
-          list: <List.Item onClick={onClose}>Close</List.Item>,
+          list: <List.Item onClick={onClose}>Close</List.Item>
         },
-        { name: "Edit" },
+        { name: "Edit" }
       ]}
     >
-      {/* Modal content */}
+      <div
+        className="flex flex-row justify-start overflow-auto p-4 bg-retroGrey"
+        style={{ maxHeight: "calc(80vh - 40px)" }}
+      >
+        <div className="flex flex-col items-center mx-2">
+          <Mshtml32529
+            onClick={handleIconClick(tieriflicksArticleURL)}
+            variant="32x32_4"
+            className="cursor-pointer"
+          />
+          <h3 className="mt-2">Article about TieriFlicks</h3>
+        </div>
+        <div className="flex flex-col items-center mx-2">
+          <FolderExe
+            onClick={handleIconClick(githubUrl)}
+            variant="32x32_4"
+            className="cursor-pointer"
+          />
+          <h3 className="mt-2">GitHub</h3>
+        </div>
+      </div>
     </Modal>
   );
 };
