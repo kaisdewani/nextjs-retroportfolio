@@ -10,6 +10,7 @@
   "dependencies": {
     "@react95/core": "^7.0.2",
     "@react95/icons": "^2.1.1",
+    "@vercel/analytics": "^1.2.2",
     "@xstyled/styled-components": "^3.8.0",
     "autoprefixer": "^10.4.19",
     "next": "14.1.4",
