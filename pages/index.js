@@ -8,6 +8,8 @@ import ClockComponent from "../components/ClockComponent";
 import YouTubeModal from "../components/YouTubeModal";
 import DesktopIcons from "../components/DesktopIcons";
 import BackgroundVideo from "../components/BackgroundVideo";
+import { Analytics } from "@vercel/analytics/react"
+
 
 const Home = () => {
   const [showExplorer, setShowExplorer] = useState(false);
@@ -38,6 +40,7 @@ const Home = () => {
       <BackgroundVideo videoSource="/wallpaper.mp4" />
         {/* Main content */}
         <DesktopIcons />
+        <Analytics />
       </main>
 
       <footer className="flex items-center justify-between text-black p-2 fixed bottom-0 w-full">
