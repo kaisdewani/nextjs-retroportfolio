@@ -1,6 +1,6 @@
 import React from "react";
 import { Modal, List } from "@react95/core";
-import { FolderExe, Mshtml32529, WindowsExplorer } from "@react95/icons";
+import { FileFind, FolderExe, Mshtml32529, WindowsExplorer } from "@react95/icons";
 
 const WindowsExplorerModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
@@ -48,6 +48,16 @@ const WindowsExplorerModal = ({ isOpen, onClose }) => {
             className="cursor-pointer"
           />
           <h3 className="mt-2">GitHub</h3>
+        </div>
+        <div className="flex flex-col items-center mx-2">
+          <FileFind
+            // onClick={handleIconClick(githubUrl)}
+            variant="32x32_4"
+            className="cursor-pointer"
+          />
+          <h3 className="mt-2">
+             <a href='/Dewani_Kais_Resume.pdf' download>Dewani_Kais_Resume.pdf</a>
+             </h3>
         </div>
       </div>
     </Modal>
