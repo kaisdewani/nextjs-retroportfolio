@@ -24,7 +24,7 @@ const ResumeModal = ({ isOpen, onClose }) => {
             <List>
               <List.Item onClick={onClose}>Close</List.Item>,
               <List.Item>
-                <a href="/Dewani_Kais_Resume.pdf" download>
+                <a className="hover:bg-white" href="/Dewani_Kais_Resume.pdf" download>
                   Download
                 </a>
               </List.Item>
