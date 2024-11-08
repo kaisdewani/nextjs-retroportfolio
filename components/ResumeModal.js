@@ -1,34 +1,31 @@
 import React from "react";
-import { Modal, List, Checkbox, Fieldset } from "@react95/core";
+import { Modal, List, Fieldset } from "@react95/core";
 import { Defrag8 } from "@react95/icons";
 
 const ResumeModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   const handleShareClick = () => {
-    window.location = "mailto:kaisdewani@yahoo.com";
+    window.location = "mailto:kaisdewani.devops@gmail.com";
   };
 
   return (
     <Modal
       icon={<Defrag8 variant="32x32_4" />}
-      title="Dewani_Kais_Résumé.pdf"
+      title="Dewani_Kais_Résumé.docx"
       closeModal={onClose}
-      width="300px"
-      height="200px"
-      className="fixed top-6 right-4"
+      className="fixed inset-0 md:inset-auto md:top-6 md:right-4 w-full md:w-[800px] h-full md:h-auto"
       menu={[
         {
           name: "File",
           list: (
             <List>
-              <List.Item onClick={onClose}>Close</List.Item>,
+              <List.Item onClick={onClose}>Close</List.Item>
               <List.Item>
-                <a className="hover:bg-white" href="/Dewani_Kais_Resume.pdf" download>
+                <a className="hover:bg-white" href="/Dewani_Kais_Resume.docx" download>
                   Download
                 </a>
               </List.Item>
-              ,
             </List>
           )
         },
@@ -39,207 +36,150 @@ const ResumeModal = ({ isOpen, onClose }) => {
       ]}
     >
       <div
-        className="overflow-auto p-4 bg-retroGrey"
-        style={{ maxHeight: "calc(80vh - 40px)" }}
+        className="overflow-auto p-2 md:p-4 bg-retroGrey"
+        style={{ maxHeight: "calc(100vh - 40px)" }}
       >
-        <h6 className="text-slate-500 text-left text-xs"><u>Download the PDF from 'File -&gt; Download'</u></h6>
-        <br/>
-        <br/>
-        <br/>
-        <h2 className="text-center text-xl max-w-full">Kais Dewani</h2>
-        <p>
-          Email: <a href="mailto:kaisdewani@yahoo.com">kaisdewani@yahoo.com</a>
-        </p>
-        <p>Phone: (954)-682-8911</p>
-        <p>
-          GitHub: <a href="https://github.com/kaisdewani">kaisdewani</a>
-        </p>
-        <br />
-        <Fieldset legend="Skills" width="300px">
-          <p>
-            Java, Selenium, Amazon Web Services, Linux, Github, Jenkins, Python,
-            CI/CD, ReactJS, Docker
+        <h6 className="text-slate-500 text-left text-xs">
+          <u>Download the PDF from 'File -&gt; Download'</u>
+        </h6>
+        
+        {/* Header Section */}
+        <div className="text-center mt-4">
+          <h1 className="text-xl md:text-2xl font-bold mb-2">Kais Dewani</h1>
+          <div className="text-xs md:text-sm space-y-1 md:space-y-0 md:space-x-2">
+            <span>San Antonio, TX</span>
+            <span className="hidden md:inline">•</span>
+            <a href="https://github.com/kaisdewani" className="hover:underline block md:inline">@kaisdewani</a>
+            <span className="hidden md:inline">•</span>
+            <a href="https://github.com/kaisdewani" className="hover:underline block md:inline">@kaisdewani</a>
+            <span className="hidden md:inline">•</span>
+            <a href="mailto:kaisdewani.devops@gmail.com" className="hover:underline block md:inline">kaisdewani.devops@gmail.com</a>
+          </div>
+          <p className="text-xs md:text-sm mt-2 px-2">
+            AWS Solutions Architect (Associate) | AZ-900: Azure Fundamentals | AZ-305: Designing Azure Infrastructure Solutions
+          </p>
+        </div>
+
+        {/* Summary Section */}
+        <Fieldset legend="Summary" className="mt-4 md:mt-6">
+          <p className="text-xs md:text-sm leading-relaxed">
+            DevSecOps Engineer with 6+ years of experience focusing on automation and security across multi cloud environments. I combine my passion for automation engineering with a security-first mindset, specializing in building secure CI/CD pipelines and infrastructure-as-code using Terraform, Ansible, and Kubernetes. Experienced in implementing automated security controls while maintaining system scalability and reliability.
           </p>
         </Fieldset>
-        <br />
-        <Fieldset legend="Certificates" width="300px">
-          <ul>
-            <li>
-              <a href="https://www.credly.com/badges/6bb07237-dc03-4835-8abd-cf663d55fa84/public_url">
-                <Checkbox readOnly checked>
-                  AWS Certified Solutions Architect Associate
-                </Checkbox>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.credly.com/badges/b8d572e9-a472-4c7a-96ed-6939826cc992/public_url">
-                <Checkbox readOnly checked>
-                  AZ-900: Microsoft Certified: Azure Fundamentals
-                </Checkbox>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.credly.com/badges/8ea7b82d-108d-41ec-8c88-c6a45a826017/public_url">
-                <Checkbox readOnly checked>
-                  AZ-305: Designing Microsoft Azure Infrastructure Solutions
-                </Checkbox>
-              </a>
-            </li>
+
+        {/* Skills Section */}
+        <Fieldset legend="Skills" className="mt-4">
+          <div className="text-xs md:text-sm space-y-2">
+            <p><strong>Cloud & Virtualization:</strong> Microsoft Azure, Amazon Web Services (AWS), VMware vSphere</p>
+            <p><strong>Networking:</strong> Route 53, VPC, Subnets, Network ACLs, Load Balancing, API Gateway</p>
+            <p><strong>CI/CD:</strong> Azure DevOps, Jenkins, GitLab CI/CD, AWS CodePipeline</p>
+            <p><strong>Scripting:</strong> Python, PowerShell, Bash, JSON, YAML</p>
+            <p><strong>Infrastructure as Code:</strong> CloudFormation, Terraform, Azure ARM Templates, Ansible</p>
+            <p><strong>Version Control:</strong> Git, Bitbucket, TortoiseSVN, GitHub</p>
+            <p><strong>Containerization:</strong> Docker, Kubernetes, ECS, EKS</p>
+            <p><strong>Security:</strong> IAM, KMS, Security Groups, AWS Secrets Manager, Tfsec, FIPS 140-2</p>
+            <p><strong>Monitoring:</strong> Splunk, CloudWatch, CloudTrail, ELK Stack</p>
+            <p><strong>Disaster Recovery:</strong> AWS Backup, Azure Recovery Services</p>
+          </div>
+        </Fieldset>
+
+        {/* Experience Section */}
+        <Fieldset legend="Experience" className="mt-4">
+          {/* DevSecOps Contracting */}
+          <div className="mb-4">
+            <div className="flex flex-col md:flex-row md:justify-between md:items-baseline">
+              <h3 className="font-bold text-sm md:text-base">DevSecOps Contracting, Sole Proprietorship</h3>
+              <span className="text-xs md:text-sm">May 2024 - Present</span>
+            </div>
+            <p className="text-xs md:text-sm italic mb-2">San Antonio TX</p>
+            <ul className="text-xs md:text-sm list-disc pl-4 space-y-1">
+              <li>Led the design and deployment of multi-cloud infrastructures for multiple enterprise clients on Upwork, using Terraform and Kubernetes to support scalable, secure environments to support over 10,000 users.</li>
+              <li>Designed and automated security controls across cloud infrastructures, including encryption and network traffic restrictions, ensuring minimal exposure to threats and reduced attack surface.</li>
+              <li>Orchestrated the use of Azure Key Vaults to manage sensitive credentials securely, ensuring that all critical information was encrypted and securely stored, preventing any exposure of plain text credentials.</li>
+              <li>Architected and implemented multi-cloud monitoring solutions using Splunk, enabling real-time log aggregation, alerting, and incident response across distributed cloud environments.</li>
+              <li>Improved visibility and reduced resolution time for critical system issues through advanced log analysis and troubleshooting capabilities.</li>
+              <li>Led the development and optimization of CI/CD pipelines with Azure DevOps and Jenkins for various client applications, including automating the deployment of Flask-based services for Shopify.</li>
+              <li>Strengthened the security posture of cloud applications by implementing Cloudflare's WAF and DDoS protection, developing advanced security rules and policies that safeguarded against threats, while optimizing for performance and availability.</li>
+              <li>Led the application of Zero Trust Security models within Kubernetes clusters, enabling secure, automated deployment and management of cloud-native applications.</li>
+            </ul>
+          </div>
+
+          {/* Senior DevSecOps Engineer */}
+          <div className="mb-4">
+            <div className="flex flex-col md:flex-row md:justify-between md:items-baseline">
+              <h3 className="font-bold text-sm md:text-base">Senior DevSecOps Engineer, Acronis SCS</h3>
+              <span className="text-xs md:text-sm">Sep 2022 - May 2024</span>
+            </div>
+            <p className="text-xs md:text-sm italic mb-2">Charlotte NC</p>
+            <ul className="text-xs md:text-sm list-disc pl-4 space-y-1">
+              <li>Led the end-to-end automation of deployment pipelines using Ansible, Docker and Jenkins, ensuring fully automated, repeatable processes that significantly increased deployment speed and consistency across both development and production environments.</li>
+              <li>Partnered with our security and compliance team to integrate FIPS 140-2 requirements into the Jenkins CI/CD pipeline, ensuring the secure handling and encryption of sensitive data throughout the build and release process to maintain compliance standards.</li>
+              <li>Managed and provisioned ESXi virtual machines within data center environments, overseeing the deployment, configuration, and maintenance of those virtual machines to ensure optimal performance and scalability.</li>
+              <li>Implemented high availability and disaster recovery strategies, ensuring continuous uptime and efficient resource utilization across virtualized environments.</li>
+              <li>Monitored and resolved Jenkins build and deployment issues, implementing static code analysis and containerization to ensure continuous, reliable software releases with minimal downtime.</li>
+              <li>Worked with development, QA, and security teams to optimize release cycles, improving system stability and accelerating deployments.</li>
+              <li>Integrated SonarQube and Tfsec into CI/CD workflows to automate security scanning and ensure compliance with code quality standards.</li>
+              <li>Maintained documentation for FIPS 140-2 compliance, including the management of configuration settings, certificates, and audit logs to ensure traceability and adherence to compliance frameworks.</li>
+              <li>Improved legacy CI/CD pipelines by introducing Docker containerization and CloudFormation, reducing build times by over 30%, and increasing infrastructure scalability and flexibility.</li>
+              <li>Conducted code reviews and pull request assessments, ensuring all changes adhered to security best practices, preventing vulnerabilities, and complying with regulatory requirements.</li>
+              <li>Implemented security controls across large-scale environments, ensuring compliance and reducing risks.</li>
+            </ul>
+          </div>
+
+          {/* Senior Build and Release Engineer */}
+          <div>
+            <div className="flex flex-col md:flex-row md:justify-between md:items-baseline">
+              <h3 className="font-bold text-sm md:text-base">Senior Build and Release Engineer, Wells Fargo</h3>
+              <span className="text-xs md:text-sm">Sep 2019 - Sep 2022</span>
+            </div>
+            <p className="text-xs md:text-sm italic mb-2">Charlotte NC</p>
+            <ul className="text-xs md:text-sm list-disc pl-4 space-y-1">
+              <li>Led and coordinated the release cycle across Performance, Development, UAT, and Production environments, ensuring smooth transitions between environments and maintaining deployment stability throughout each stage.</li>
+              <li>Collaborated with technology teams and stakeholders to identify, assess, and mitigate potential risks associated with monthly releases, aligning business priorities with technical execution to ensure successful and secure deployments.</li>
+              <li>Participate in meetings with technology, stakeholders to identify and mitigate potential risks associated with the monthly releases.</li>
+              <li>Developed and maintained detailed software release management documentation, facilitating clear communication with stakeholders and ensuring all procedural and technical requirements were met prior to each deployment.</li>
+              <li>Resolved complex environmental issues in collaboration with development teams, using tools such as Splunk and Urban Code Deploy to conduct deep root cause analysis and maintain system health.</li>
+              <li>Managed and documented incidents and resolutions through JIRA for visibility and traceability.</li>
+              <li>Implemented the Blue-Green deployment model, leveraging in-house management consoles, Urban Code Deploy, and AppViewX F5, to minimize downtime, streamline release processes, and mitigate deployment risks across critical environments.</li>
+              <li>Updated and maintained project dependencies using Maven, ensuring consistent builds and seamless integration with updated libraries, enhancing application reliability and reducing integration challenges across development cycles.</li>
+              <li>Identified manual test scripts suitable for automation within smoke and regression testing suites, leveraging Selenium, Java, TestNG, and Jenkins/Maven to enhance the automation framework.</li>
+              <li>Developed project test plans, estimations, and strategic approaches, ensuring alignment with organizational objectives.</li>
+              <li>Followed agile methodologies by engaging within Kanban and Scrum teams, leading to continuous improvement.</li>
+              <li>Led backlog grooming sessions to prioritize and refine Epics, features, and user stories, enhancing the team's focus and productivity.</li>
+            </ul>
+          </div>
+        </Fieldset>
+
+        {/* Projects Section */}
+        <Fieldset legend="Projects" className="mt-4">
+          <ul className="text-xs md:text-sm list-disc pl-4 space-y-1">
+            <li><strong>TieriFlicks:</strong> An iOS application that uses OpenAI GPT 4, Firebase, and SwiftUI.</li>
+            <li><strong>The Gist:</strong> A website built using ReactJS to summarize articles using a text analysis API.</li>
+            <li><strong>StarTrivia:</strong> A website built using ReactJS to summarize articles using a text analysis API.</li>
+            <li><strong>Jokes For Joy:</strong> Website to generate dad jokes using ReactS by using API calls.</li>
+            <li><strong>Quick Connect:</strong> React on Rails application to make sharing contact information more efficient by leveraging Twilio API.</li>
           </ul>
         </Fieldset>
-        <br />
-        <h2 className="text-base">Professional Experience</h2>
-        <h4>
-          <u>Release Engineer, Acronis SCS</u>
-        </h4>
-        <p>Oct 2022 – Jan 2024, Remote</p>
-        <ul>
-          <li>
-            • Collaborated with security and compliance teams to incorporate
-            FIPS 140-2 requirements into the build and release pipelines,
-            ensuring secure handling of sensitive data.
-          </li>
-          <li>
-            • Monitor and troubleshoot build and deployment failures,
-            identifying and resolving issues in a timely manner to ensure smooth
-            and reliable software releases.
-          </li>
-          <li>
-            • Coordinated with cross-functional teams, including developers,
-            quality assurance, and security, to streamline release cycles and
-            ensure efficient deployment processes.
-          </li>
-          <li>
-            • Maintained documentation and evidence of FIPS 140-2 compliance,
-            including configuration settings, certificates, and audit logs.
-          </li>
-        </ul>
-        <br />
-        <h4>
-          <u>Release Engineer, Wells Fargo</u>
-        </h4>
-        <p>Dec 2020 – Sep 2022, San Antonio TX</p>
-        <ul>
-          <li>
-            • Participate in the release cycle which involves Performance,
-            Development, UAT, and Production environments.
-          </li>
-          <li>
-            • Participate in meetings with Technology, stakeholders to identify
-            and mitigate potential risks associated with the monthly releases.
-          </li>
-          <li>
-            • Documented software release management procedures and reviewed
-            with stakeholders prior to deployment per release.
-          </li>
-          <li>
-            • Resolve environment issues with development teams and
-            update/create environment tickets in JIRA for documentation and
-            using tools such as Splunk and Urban Code Deploy to find root cause.
-          </li>
-          <li>
-            • Merged release branches to the respective master branches after
-            the production release and resolved the conflicts raised during the
-            merge.
-          </li>
-          <li>
-            • Experience in Blue-Green deployment model by utilizing proprietary
-            in house management console,Urban Code Deploy, and AppViewX F5.
-          </li>
-          <li>
-            • Updated and maintained project dependencies using pom.xml in
-            Maven, ensuring consistent builds and seamless integration with
-            updated libraries.
-          </li>
-        </ul>
-        <br />
-        <h4>
-          <u>Automation Test Engineer, Wells Fargo</u>
-        </h4>
-        <p>Sep 2019 – Nov 2020, Charlotte NC</p>
-        <ul>
-          <li>
-            • Identify manual script candidates for smoke and regression test
-            suites and using Selenium, Java, TestNG, and Jenkins/Maven to
-            convert them for the automation suite.
-          </li>
-          <li>
-            • Prepared project test plans, test estimations and approach
-            strategies.
-          </li>
-          <li>
-            • Worked closely with Business-analyst and developers for successful
-            releases.
-          </li>
-          <li>
-            • Work with a global team spread across tech hubs in multiple
-            geographies and time zones.
-          </li>
-          <li>
-            • Exercise agile methodology by collaborating within kanban and
-            scrum teams.
-          </li>
-          <li>
-            • Led the backlog grooming sessions to discuss the Epics, features
-            and stories within the scrum team.
-          </li>
-        </ul>
-        <br />
-        <h4>
-          <u>Automation Test Engineer, Synechron Inc.</u>
-        </h4>
-        <p>Jan 2019 – Sep 2019, Charlotte NC</p>
-        <ul>
-          <li>
-            • Collaborating closely with developers to enhance testing through
-            indepth understanding of the system and source code under test.
-          </li>
-          <li>
-            • Using Java as well as numerous testing technologies (Selenium,
-            TestNG, and internal frameworks) to design, build, and maintain test
-            scripts and suites.
-          </li>
-          <li>
-            • Contributed to improvements in the UI automation framework that is
-            used to test a mission critical application for mortgage and lending
-            applications.
-          </li>
-          <li>
-            • Help to onboard 3 new QA team members and train them on internal
-            frameworks as well as partial Java training.
-          </li>
-          <li>
-            • Crafted confluence documents around the automation framework and
-            troubleshooting tips.
-          </li>
-          <li>
-            • Participated as a member of the Innovation Team to help provide
-            ways to improve efficiency in existing and future projects.
-          </li>
-        </ul>
-        <br />
-        <h3>
-          <u>Projects</u>
-        </h3>
-        <ul>
-          <li>
-            TieriFlicks Movie App and Tier List: Please check out my app on the
-            Apple iOS App Store =)
-          </li>
-          <li>
-            The Gist: A website built using ReactJS to summarize articles...
-          </li>
-        </ul>
-        <a href="https://github.com/kaisdewani">Checkout my Github</a>
-        <br />
-        <br />
-        <h3>
-          <u>Education</u>
-        </h3>
-        <h4>Full Stack Web Development, Wyncode Academy</h4>
-        <p>Jul 2018 – Sep 2018, Miami FL</p>
-        <h4>Associate of Science, Palm Beach College</h4>
-        <p>Aug 2013 – May 2015, Boca Raton FL</p>
+
+        {/* Education Section */}
+        <Fieldset legend="Education" className="mt-4">
+          <div className="space-y-3 text-xs md:text-sm">
+            <div>
+              <div className="flex flex-col md:flex-row md:justify-between md:items-baseline">
+                <h3 className="font-bold">Full Stack Web Development</h3>
+                <span>Jul 2018 - Sep 2018</span>
+              </div>
+              <p className="italic">Wyncode Academy</p>
+            </div>
+            <div>
+              <div className="flex flex-col md:flex-row md:justify-between md:items-baseline">
+                <h3 className="font-bold">Associate of Science</h3>
+                <span>Aug 2013 - May 2015</span>
+              </div>
+              <p className="italic">Palm Beach College</p>
+            </div>
+          </div>
+        </Fieldset>
       </div>
     </Modal>
   );
