@@ -36,7 +36,7 @@ const Home = () => {
       <ResumeModal isOpen={showResume} onClose={() => setResume(false)} />
 
       
-      <main className="flex-grow p-4 ">
+      <main className="grow p-4">
       <BackgroundVideo videoSource="/wallpaper.mp4" />
         {/* Main content */}
         <DesktopIcons />
