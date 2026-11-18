@@ -1,5 +1,5 @@
 # Node version
-FROM node:18
+FROM node:24
 
 # directory for repo
 WORKDIR /retroPortfolio
@@ -8,7 +8,7 @@ WORKDIR /retroPortfolio
 COPY . .
 
 # Install dependencies from package.json
-RUN npm install
+RUN npm ci
 
 # Build your Next.js application
 RUN npm run build

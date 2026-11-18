@@ -1,14 +1,9 @@
-const withFonts = require('next-fonts');
-const withImages = require('next-images');
-const withTM = require('next-transpile-modules')([
-  '@react95/core',
-  '@react95/icons',
-]);
-
-const nextConfig = {
-  images: {
-    disableStaticImages: true,
+/** @type {import('next').NextConfig} */
+module.exports = {
+  transpilePackages: ['@react95/core', '@react95/icons'],
+  turbopack: {
+    rules: {
+      '*.{eot,ttf,woff,woff2}': { type: 'asset' },
+    },
   },
 };
-
-module.exports = withTM(withFonts(withImages(nextConfig)));

@@ -2,11 +2,14 @@ import React from "react";
 import { Modal, List, Fieldset } from "@react95/core";
 import { Defrag8 } from "@react95/icons";
 
+const email = "kaisdewani@gmail.com";
+const emailLink = `mailto:${email}`;
+
 const ResumeModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   const handleShareClick = () => {
-    window.location = "mailto:kaisdewani.devops@gmail.com";
+    window.location = emailLink;
   };
 
   return (
@@ -22,8 +25,13 @@ const ResumeModal = ({ isOpen, onClose }) => {
             <List>
               <List.Item onClick={onClose}>Close</List.Item>
               <List.Item>
+                <a className="hover:bg-white" href="/Dewani_Kais_Resume.pdf" download>
+                  Download PDF
+                </a>
+              </List.Item>
+              <List.Item>
                 <a className="hover:bg-white" href="/Dewani_Kais_Resume.docx" download>
-                  Download
+                  Download Word document
                 </a>
               </List.Item>
             </List>
@@ -40,58 +48,56 @@ const ResumeModal = ({ isOpen, onClose }) => {
         style={{ maxHeight: "calc(100vh - 40px)" }}
       >
         <h6 className="text-slate-500 text-left text-xs">
-          <u>Download the PDF from 'File -&gt; Download'</u>
+          Download the PDF or Word document from the File menu.
         </h6>
         
         {/* Header Section */}
         <div className="text-center mt-4">
           <h1 className="text-xl md:text-2xl font-bold mb-2">Kais Dewani</h1>
           <div className="text-xs md:text-sm space-y-1 md:space-y-0 md:space-x-2">
-            <span>San Antonio, TX</span>
+            <span>Charlotte, NC</span>
             <span className="hidden md:inline">•</span>
-            <a href="https://github.com/kaisdewani" className="hover:underline block md:inline">@kaisdewani</a>
+            <a href="https://www.linkedin.com/in/kaisdewani/" className="hover:underline block md:inline">LinkedIn</a>
             <span className="hidden md:inline">•</span>
-            <a href="https://github.com/kaisdewani" className="hover:underline block md:inline">@kaisdewani</a>
+            <a href="https://github.com/kaisdewani" className="hover:underline block md:inline">GitHub</a>
             <span className="hidden md:inline">•</span>
-            <a href="mailto:kaisdewani.devops@gmail.com" className="hover:underline block md:inline">kaisdewani.devops@gmail.com</a>
+            <a href={emailLink} className="hover:underline block md:inline">{email}</a>
           </div>
           <p className="text-xs md:text-sm mt-2 px-2">
-            AWS Solutions Architect (Associate) | AZ-900: Azure Fundamentals | AZ-305: Designing Azure Infrastructure Solutions
+            AWS Certified Solutions Architect – Associate | Microsoft Azure exams AZ-900 and AZ-305
           </p>
         </div>
 
         {/* Summary Section */}
         <Fieldset legend="Summary" className="mt-4 md:mt-6">
           <p className="text-xs md:text-sm leading-relaxed">
-            DevSecOps Engineer with 6+ years of experience focusing on automation and security across multi cloud environments. I combine my passion for automation engineering with a security-first mindset, specializing in building secure CI/CD pipelines and infrastructure-as-code using Terraform, Ansible, and Kubernetes. Experienced in implementing automated security controls while maintaining system scalability and reliability.
+            QA engineer with a background in test automation, release engineering, and DevSecOps. I build Playwright and API regression tests, validate features written with AI tools, and help product, design, and engineering teams ship reliable software.
           </p>
-        </Fieldset>
-
-        {/* Skills Section */}
-        <Fieldset legend="Skills" className="mt-4">
-          <div className="text-xs md:text-sm space-y-2">
-            <p><strong>Cloud & Virtualization:</strong> Microsoft Azure, Amazon Web Services (AWS), VMware vSphere</p>
-            <p><strong>Networking:</strong> Route 53, VPC, Subnets, Network ACLs, Load Balancing, API Gateway</p>
-            <p><strong>CI/CD:</strong> Azure DevOps, Jenkins, GitLab CI/CD, AWS CodePipeline</p>
-            <p><strong>Scripting:</strong> Python, PowerShell, Bash, JSON, YAML</p>
-            <p><strong>Infrastructure as Code:</strong> CloudFormation, Terraform, Azure ARM Templates, Ansible</p>
-            <p><strong>Version Control:</strong> Git, Bitbucket, TortoiseSVN, GitHub</p>
-            <p><strong>Containerization:</strong> Docker, Kubernetes, ECS, EKS</p>
-            <p><strong>Security:</strong> IAM, KMS, Security Groups, AWS Secrets Manager, Tfsec, FIPS 140-2</p>
-            <p><strong>Monitoring:</strong> Splunk, CloudWatch, CloudTrail, ELK Stack</p>
-            <p><strong>Disaster Recovery:</strong> AWS Backup, Azure Recovery Services</p>
-          </div>
         </Fieldset>
 
         {/* Experience Section */}
         <Fieldset legend="Experience" className="mt-4">
+          <div className="mb-4">
+            <div className="flex flex-col md:flex-row md:justify-between md:items-baseline">
+              <h3 className="font-bold text-sm md:text-base">QA Engineer, Fastbreak AI</h3>
+              <span className="text-xs md:text-sm">Jul 2025 – Present</span>
+            </div>
+            <p className="text-xs md:text-sm italic mb-2">Charlotte, NC</p>
+            <ul className="text-xs md:text-sm list-disc pl-4 space-y-1">
+              <li>Build and maintain Playwright and API test automation to expand regression coverage and catch failures earlier.</li>
+              <li>Use Cursor and LLMs to draft and refine automated tests, reducing manual test-writing effort.</li>
+              <li>Stress-test features built with AI tools and design cross-application smoke checks to catch regressions before release.</li>
+              <li>Partner with product, design, and engineering on release readiness, validating both AI-generated and human-written changes.</li>
+            </ul>
+          </div>
+
           {/* DevSecOps Contracting */}
           <div className="mb-4">
             <div className="flex flex-col md:flex-row md:justify-between md:items-baseline">
               <h3 className="font-bold text-sm md:text-base">DevSecOps Contracting, Sole Proprietorship</h3>
-              <span className="text-xs md:text-sm">May 2024 - Present</span>
+              <span className="text-xs md:text-sm">May 2024 – Oct 2025</span>
             </div>
-            <p className="text-xs md:text-sm italic mb-2">San Antonio TX</p>
+            <p className="text-xs md:text-sm italic mb-2">Remote</p>
             <ul className="text-xs md:text-sm list-disc pl-4 space-y-1">
               <li>Led the design and deployment of multi-cloud infrastructures for multiple enterprise clients on Upwork, using Terraform and Kubernetes to support scalable, secure environments to support over 10,000 users.</li>
               <li>Designed and automated security controls across cloud infrastructures, including encryption and network traffic restrictions, ensuring minimal exposure to threats and reduced attack surface.</li>
@@ -110,7 +116,7 @@ const ResumeModal = ({ isOpen, onClose }) => {
               <h3 className="font-bold text-sm md:text-base">Senior DevSecOps Engineer, Acronis SCS</h3>
               <span className="text-xs md:text-sm">Sep 2022 - May 2024</span>
             </div>
-            <p className="text-xs md:text-sm italic mb-2">Charlotte NC</p>
+            <p className="text-xs md:text-sm italic mb-2">Remote</p>
             <ul className="text-xs md:text-sm list-disc pl-4 space-y-1">
               <li>Led the end-to-end automation of deployment pipelines using Ansible, Docker and Jenkins, ensuring fully automated, repeatable processes that significantly increased deployment speed and consistency across both development and production environments.</li>
               <li>Partnered with our security and compliance team to integrate FIPS 140-2 requirements into the Jenkins CI/CD pipeline, ensuring the secure handling and encryption of sensitive data throughout the build and release process to maintain compliance standards.</li>
@@ -126,13 +132,13 @@ const ResumeModal = ({ isOpen, onClose }) => {
             </ul>
           </div>
 
-          {/* Senior Build and Release Engineer */}
-          <div>
+          {/* Release Engineer */}
+          <div className="mb-4">
             <div className="flex flex-col md:flex-row md:justify-between md:items-baseline">
-              <h3 className="font-bold text-sm md:text-base">Senior Build and Release Engineer, Wells Fargo</h3>
-              <span className="text-xs md:text-sm">Sep 2019 - Sep 2022</span>
+              <h3 className="font-bold text-sm md:text-base">Release Engineer, Wells Fargo</h3>
+              <span className="text-xs md:text-sm">Dec 2020 – Sep 2022</span>
             </div>
-            <p className="text-xs md:text-sm italic mb-2">Charlotte NC</p>
+            <p className="text-xs md:text-sm italic mb-2">San Antonio, TX</p>
             <ul className="text-xs md:text-sm list-disc pl-4 space-y-1">
               <li>Led and coordinated the release cycle across Performance, Development, UAT, and Production environments, ensuring smooth transitions between environments and maintaining deployment stability throughout each stage.</li>
               <li>Collaborated with technology teams and stakeholders to identify, assess, and mitigate potential risks associated with monthly releases, aligning business priorities with technical execution to ensure successful and secure deployments.</li>
@@ -147,6 +153,34 @@ const ResumeModal = ({ isOpen, onClose }) => {
               <li>Followed agile methodologies by engaging within Kanban and Scrum teams, leading to continuous improvement.</li>
               <li>Led backlog grooming sessions to prioritize and refine Epics, features, and user stories, enhancing the team's focus and productivity.</li>
             </ul>
+          </div>
+
+          <div>
+            <div className="flex flex-col md:flex-row md:justify-between md:items-baseline">
+              <h3 className="font-bold text-sm md:text-base">Quality Assurance Automation Engineer, Wells Fargo</h3>
+              <span className="text-xs md:text-sm">Jan 2019 – Dec 2020</span>
+            </div>
+            <p className="text-xs md:text-sm italic mb-2">San Antonio, TX</p>
+            <ul className="text-xs md:text-sm list-disc pl-4 space-y-1">
+              <li>Automated smoke and regression tests with Selenium, Java, TestNG, Jenkins, and Maven.</li>
+            </ul>
+          </div>
+        </Fieldset>
+
+        {/* Skills Section */}
+        <Fieldset legend="Skills" className="mt-4">
+          <div className="text-xs md:text-sm space-y-2">
+            <p><strong>Quality Engineering:</strong> Playwright, Selenium, TestNG, REST Assured, API testing, Cursor</p>
+            <p><strong>Cloud & Virtualization:</strong> Microsoft Azure, Amazon Web Services (AWS), VMware vSphere</p>
+            <p><strong>Networking:</strong> Route 53, VPC, Subnets, Network ACLs, Load Balancing, API Gateway</p>
+            <p><strong>CI/CD:</strong> Azure DevOps, Jenkins, GitLab CI/CD, AWS CodePipeline</p>
+            <p><strong>Languages & Scripting:</strong> Java, Python, JavaScript, PowerShell, Bash, JSON, YAML</p>
+            <p><strong>Infrastructure as Code:</strong> CloudFormation, Terraform, Azure ARM Templates, Ansible</p>
+            <p><strong>Version Control:</strong> Git, Bitbucket, TortoiseSVN, GitHub</p>
+            <p><strong>Containerization:</strong> Docker, Kubernetes, ECS, EKS</p>
+            <p><strong>Security:</strong> IAM, KMS, Security Groups, AWS Secrets Manager, Tfsec, FIPS 140-2</p>
+            <p><strong>Monitoring:</strong> Splunk, CloudWatch, CloudTrail, ELK Stack</p>
+            <p><strong>Disaster Recovery:</strong> AWS Backup, Azure Recovery Services</p>
           </div>
         </Fieldset>
 
